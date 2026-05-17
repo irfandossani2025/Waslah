@@ -15,11 +15,11 @@ export function DemoPreview({ locale }: { locale: Locale }) {
     <section className="section-shell py-16">
       <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <SectionHeading title={t.landing.demoTitle} description={t.landing.demoSubtitle} />
-        <Card className="overflow-hidden border-white/60">
+        <Card className="modern-card overflow-hidden">
           <CardContent className="p-4">
             <div className="grid gap-4 md:grid-cols-2">
               {mockProducts.slice(0, 2).map((product) => (
-                <div className="rounded-3xl border border-border/70 bg-white p-3" key={product.id}>
+                <div className="rounded-3xl border border-white/70 bg-white/90 p-3 transition duration-300 hover:-translate-y-1 hover:shadow-soft" key={product.id}>
                   <div className="relative h-44 overflow-hidden rounded-2xl">
                     <Image alt={product.name.en} className="object-cover" fill src={product.image_urls[0]} />
                   </div>
@@ -28,7 +28,7 @@ export function DemoPreview({ locale }: { locale: Locale }) {
                       <div className="font-semibold">{product.name[locale]}</div>
                       <div className="text-sm text-muted-foreground">{product.price} OMR</div>
                     </div>
-                    <Button size="sm">{t.storefront.addToCart}</Button>
+                    <Button size="sm" className="bg-gradient-to-r from-primary to-cyan-500 text-white hover:brightness-110">{t.storefront.addToCart}</Button>
                   </div>
                 </div>
               ))}

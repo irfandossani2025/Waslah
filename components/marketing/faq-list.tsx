@@ -17,7 +17,7 @@ export function FaqList({ locale }: { locale: Locale }) {
       <SectionHeading title={t.landing.faqTitle} align="center" />
       <div className="mt-10 grid gap-4 lg:grid-cols-3">
         {items.map((item) => (
-          <Card key={item.q}>
+          <Card className="modern-card" key={item.q}>
             <CardContent className="space-y-3 p-6">
               <h3 className="text-lg font-semibold">{item.q}</h3>
               <p className="text-sm leading-7 text-muted-foreground">{item.a}</p>

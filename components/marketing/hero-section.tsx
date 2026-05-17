@@ -31,11 +31,11 @@ export function HeroSection({ locale }: { locale: Locale }) {
             {t.landing.eyebrow}
           </div>
           <h1 className="text-balance text-4xl font-semibold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-            {t.landing.title}
+            <span className="bg-gradient-to-r from-emerald-600 via-cyan-500 to-indigo-500 bg-clip-text text-transparent">{t.landing.title}</span>
           </h1>
           <p className="mt-5 max-w-xl text-lg leading-8 text-muted-foreground">{t.landing.subtitle}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button asChild className="h-12 px-6">
+            <Button asChild className="h-12 bg-gradient-to-r from-primary to-cyan-500 px-6 text-white shadow-glow transition hover:brightness-110">
               <Link href="/signup">
                 {t.common.startSelling}
                 <ArrowRight className="h-4 w-4" />
@@ -54,7 +54,7 @@ export function HeroSection({ locale }: { locale: Locale }) {
           transition={{ duration: 0.6, delay: 0.12 }}
           className="relative"
         >
-          <Card className="overflow-hidden border-0 bg-hero-grid shadow-glow">
+          <Card className="gradient-ring animate-float-soft overflow-hidden border-0 bg-hero-grid shadow-glow">
             <CardContent className="p-6 sm:p-8">
               <div className="rounded-[28px] border border-white/60 bg-white/85 p-4 shadow-soft">
                 <div className="flex items-center justify-between">
