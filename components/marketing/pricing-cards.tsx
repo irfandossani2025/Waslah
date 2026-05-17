@@ -20,7 +20,7 @@ export function PricingCards({ locale }: { locale: Locale }) {
           const isFeatured = plan === "business";
 
           return (
-            <Card key={plan} className={isFeatured ? "border-primary shadow-glow" : ""}>
+            <Card key={plan} className={isFeatured ? "modern-card gradient-ring border-primary/40 shadow-glow" : "modern-card"}>
               <CardHeader>
                 <CardTitle className="flex items-center justify-between">
                   {item.name}
@@ -38,7 +38,7 @@ export function PricingCards({ locale }: { locale: Locale }) {
                     </li>
                   ))}
                 </ul>
-                <Button className="w-full" type="button">{t.common.startSelling}</Button>
+                <Button className="w-full bg-gradient-to-r from-primary to-cyan-500 text-white transition hover:brightness-110" type="button">{t.common.startSelling}</Button>
               </CardContent>
             </Card>
           );

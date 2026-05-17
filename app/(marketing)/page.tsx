@@ -29,7 +29,7 @@ export default async function MarketingPage() {
         <SectionHeading title={t.landing.testimonialsTitle} align="center" />
         <div className="mt-10 grid gap-4 lg:grid-cols-3">
           {[1, 2, 3].map((item) => (
-            <Card key={item}>
+            <Card className="modern-card" key={item}>
               <CardContent className="space-y-4 p-6">
                 <Quote className="h-6 w-6 text-primary" />
                 <p className="text-sm leading-7 text-muted-foreground">
@@ -50,7 +50,7 @@ export default async function MarketingPage() {
       <FaqList locale={locale} />
 
       <section className="section-shell py-16">
-        <Card className="overflow-hidden border-0 bg-primary text-primary-foreground shadow-glow">
+        <Card className="gradient-ring overflow-hidden border-0 bg-gradient-to-r from-primary via-cyan-500 to-indigo-500 text-primary-foreground shadow-glow">
           <CardContent className="flex flex-col gap-6 p-8 sm:p-10 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-2xl">
               <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">{t.landing.ctaTitle}</h2>

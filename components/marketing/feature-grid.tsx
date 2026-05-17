@@ -20,19 +20,19 @@ export function FeatureGrid({ locale }: { locale: Locale }) {
   return (
     <section className="section-shell py-16" id="features">
       <SectionHeading title={t.landing.featuresTitle} description={t.landing.featuresSubtitle} align="center" />
-      <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         {features.map((feature) => {
           const Icon = feature.icon;
           return (
-            <Card key={feature.title} className="border-white/60">
+            <Card key={feature.title} className="modern-card group relative overflow-hidden">
               <CardHeader>
-                <div className="mb-4 w-fit rounded-2xl bg-primary/10 p-3 text-primary">
+                <div className="mb-4 w-fit rounded-2xl bg-gradient-to-br from-primary/20 to-cyan-400/15 p-3 text-primary transition-transform duration-300 group-hover:scale-105">
                   <Icon className="h-5 w-5" />
                 </div>
                 <CardTitle>{feature.title}</CardTitle>
                 <CardDescription>{feature.description}</CardDescription>
               </CardHeader>
-              <CardContent />
+              <CardContent className="h-1" />
             </Card>
           );
         })}
